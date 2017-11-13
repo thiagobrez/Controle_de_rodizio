@@ -1,0 +1,59 @@
+<md-card class="cardLogin">
+    <md-toolbar class="cardToolbar">
+        <h1 layout="row" layout-align="center center" md-truncate>CONTROLE DE RODÍZIOS</h1>
+    </md-toolbar>
+    <md-card-content>
+        <form name="formLogin">
+            <!-- EMAIL -->
+            <div ng-class="{ 'has-error' : !validoEmailCadastrado}">
+                <md-input-container layout="row" layout-align="center center">
+                    <label>Email:</label>
+                    <input
+                            type="email"
+                            ng-model="usuario.email"
+                            name="login"
+                            autofocus
+                    >
+                </md-input-container>
+            </div>
+
+            <!-- SENHA -->
+            <div ng-class="{ 'has-error' : !validoSenha}">
+                <md-input-container layout="row" layout-align="center center">
+                    <label>Senha:</label>
+                    <input
+                            ng-model="usuario.senha"
+                            ng-change="criaHash()"
+                            type="password"
+                            name="senha"
+                    >
+                </md-input-container>
+            </div>
+
+            <!-- BTN LOGAR -->
+            <div layout="row" layout-align="center center">
+                <md-button
+                        class="md-raised md-warn botaoLogin"
+                        ng-click="logar()">
+                    LOGIN
+                </md-button>
+            </div>
+
+            <!-- MSGS DE ERRO -->
+            <div>
+                <div ng-show="!validoSenha" class="msg-erro control-label">
+                    <h5>Ops! A senha está incorreta!</h5>
+                </div>
+                <div ng-show="!validoEmailCadastrado"
+                     class="msg-erro control-label">
+                    <h5>Ops! O Usuario não está cadastrado ou e-mail está
+                        incorreto!</h5>
+                </div>
+                <div ng-show="!validoServer" class="msg-erro control-label">
+                    <h5>Ops! parece que tivemos um problema com o server, tente
+                        mais tarde!</h5>
+                </div>
+            </div>
+        </form>
+    </md-card-content>
+</md-card>

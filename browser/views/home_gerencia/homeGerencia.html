@@ -1,0 +1,58 @@
+<div class="container" ng-controller="homeGerenciaController">
+
+    <!--BOTÕES DE AÇÃO DO ADMIN-->
+
+    <md-card class="cardGerencia">
+        <md-toolbar class="cardToolbar">
+            <h1 class="text-center">CONTROLE DE RODÍZIOS</h1>
+        </md-toolbar>
+        <div layout="column" layout-align="center center">
+            <md-button class="md-raised md-warn botoesAcaoAdmin"
+                       ng-click="adicionaParticipante()">Adicionar participante
+            </md-button>
+            <md-button class="md-raised md-warn botoesAcaoAdmin"
+                       ng-click="adicionaRodizio(participantes)">Adicionar rodízio
+            </md-button>
+            <md-button class="md-raised md-warn botoesAcaoAdmin"
+                       ng-click="editaParticipante(participantes)">Editar participante
+            </md-button>
+            <md-button class="md-raised md-warn botoesAcaoAdmin"
+                       ng-click="editaRodizio(rodizios)">Editar rodízio
+            </md-button>
+        </div>
+    </md-card>
+
+    <!--DIALOGS-->
+    <div style="visibility: hidden">
+        <div id="dialogoAdicionaParticipante" class="md-dialog-container">
+            <md-dialog class="dialogoAdicionaParticipantes" aria-label="Adicionar participante">
+                <dialogoadicionaparticipante participantes="participantes"></dialogoadicionaparticipante>
+            </md-dialog>
+        </div>
+    </div>
+
+    <div style="visibility: hidden">
+        <div id="dialogoAdicionaRodizio" class="md-dialog-container">
+            <md-dialog class="dialogoAdicionaRodizio" aria-label="Adicionar rodizio">
+                <dialogoadicionarodizio participantes="participantes"></dialogoadicionarodizio>
+            </md-dialog>
+        </div>
+    </div>
+
+    <div style="visibility: hidden">
+        <div id="dialogoEditaParticipante" class="md-dialog-container">
+            <md-dialog class="dialogoEditaParticipante" aria-label="Editar participante">
+                <dialogoeditaparticipante participantes="participantes"></dialogoeditaparticipante>
+            </md-dialog>
+        </div>
+    </div>
+
+    <div style="visibility: hidden">
+        <div id="dialogoEditaRodizio" class="md-dialog-container">
+            <md-dialog class="dialogoEditaRodizio" aria-label="Editar rodizio">
+                <dialogoeditarodizio participantes="participantes" rodizios="rodizios" editando="editando"></dialogoeditarodizio>
+            </md-dialog>
+        </div>
+    </div>
+
+</div>

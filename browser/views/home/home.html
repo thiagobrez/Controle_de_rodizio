@@ -1,0 +1,41 @@
+<md-card class="cardRodizios">
+    <md-toolbar class="cardToolbar">
+        <h1 layout="row" layout-align="center center">RODÍZIOS</h1>
+    </md-toolbar>
+    <md-card-content>
+        <div class="table-responsive table-striped">
+            <table class="table">
+                <thead>
+                <tr>
+                    <th>Rodízio</th>
+                    <th>Padrão</th>
+                    <th>Participantes</th>
+                    <th>Entradas</th>
+                    <th>Saídas</th>
+                    <th>Rodada</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr ng-repeat="rodizio in rodizios">
+                    <td>{{rodizio.nome}}</td>
+                    <td>{{rodizio.padrao}}</td>
+                    <td>
+                        <md-button class="md-raised md-warn botaoComum" ng-click="verParticipantes(rodizio.participantes)">VER</md-button>
+                    </td>
+                    <td>{{rodizio.entradas}}</td>
+                    <td>{{rodizio.saidas}}</td>
+                    <td>{{rodizio.rodada}}</td>
+                </tr>
+                </tbody>
+            </table>
+        </div>
+    </md-card-content>
+</md-card>
+
+<div style="visibility: hidden">
+    <div id="dialogoVerParticipantes" class="md-dialog-container">
+        <md-dialog class="dialogoVerParticipantes" aria-label="Ver participantes">
+            <dialogoverparticipantes participantes="participantes"></dialogoverparticipantes>
+        </md-dialog>
+    </div>
+</div>

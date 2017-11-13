@@ -1,0 +1,199 @@
+
+
+.cvIcon{
+    font-size: 20em ;
+    color:#556B2F;
+}
+.bordaEstilzada {
+    border-style: solid;
+    border-width: medium;
+    border-color: #2C2C2C;
+}
+
+
+
+.box {
+    float: left;
+    margin-left: 2em;
+    max-width: 9em
+}
+
+.box1{
+    float: right;
+    max-width: 10em;
+    margin-right: 4em;
+    margin-top: 2em;
+}
+
+.botaoAnimado {
+    display: inline-block;
+    border-radius: 4px;
+    background-color: #449d44;
+    border: none;
+    color: #FFFFFF;
+    text-align: center;
+    padding: 1em;
+    width: 8em;
+    transition: all 0.5s;
+    cursor: pointer;
+
+}
+
+.botaoAnimado span {
+    cursor: pointer;
+    display: inline-block;
+    position: relative;
+    transition: 0.5s;
+}
+
+.botaoAnimado span:after {
+    content: '»';
+    position: absolute;
+    opacity: 0;
+    top: 0;
+    right: -20px;
+    transition: 0.5s;
+}
+
+.botaoAnimado:hover span {
+    padding-right: 25px;
+}
+
+.botaoAnimado:hover span:after {
+    opacity: 1;
+    right: 0;
+}
+
+tr:nth-child(even){background-color: #f2f2f2}
+
+
+.inputStyle{
+
+}
+
+/*SEARCH INPUT*/
+.search-form .form-group {
+    float: right !important;
+    transition: all 0.35s, border-radius 0s;
+    width: 32px;
+    height: 32px;
+    background-color: #fff;
+    box-shadow: 0 1px 1px rgba(0, 0, 0, 0.075) inset;
+    border-radius: 25px;
+    border: 1px solid #ccc;
+}
+.search-form .form-group input.form-control {
+    padding-right: 20px;
+    border: 0 none;
+    background: transparent;
+    box-shadow: none;
+    display:block;
+}
+.search-form .form-group input.form-control::-webkit-input-placeholder {
+    display: none;
+}
+.search-form .form-group input.form-control:-moz-placeholder {
+    /* Firefox 18- */
+    display: none;
+}
+.search-form .form-group input.form-control::-moz-placeholder {
+    /* Firefox 19+ */
+    display: none;
+}
+.search-form .form-group input.form-control:-ms-input-placeholder {
+    display: none;
+}
+.search-form .form-group:hover,
+.search-form .form-group.hover {
+    width: 100%;
+    border-radius: 20px 25px 25px 20px;
+}
+.search-form .form-group span.form-control-feedback {
+    position: absolute;
+    top: -1px;
+    right: -2px;
+    z-index: 2;
+    display: block;
+    width: 34px;
+    height: 34px;
+    line-height: 34px;
+    text-align: center;
+    color: black;
+    left: initial;
+    font-size: 14px;
+}
+
+.verde{
+    background-color:rgba(0,255,0,0.3);
+}
+.size{
+    min-width: 9em;
+}
+
+.visibility{
+    visibility: hidden;
+}
+
+.painel-animado.ng-leave-active{
+    transform: scale(0.1);
+}
+
+.painel-animado{
+    transition: transform 0.8s;
+}
+
+/*CONTROLE DE RODIZIOS*/
+
+.cardRodizios {
+    opacity: 0.9;
+    margin-top: 2%;
+    margin-left: 10%;
+    margin-right: 10%;
+    -webkit-border-radius: 10px;
+}
+
+.cardToolbar {
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+    background-color: black !important;
+}
+
+.botaoComum{
+    background-color: black !important;
+}
+
+.cardLogin {
+    margin-top: 5%;
+    margin-left: 33%;
+    margin-right: 33%;
+    -webkit-border-radius: 10px;
+}
+
+.inputLogin {
+    margin-top: 1em;
+}
+
+.botaoLogin {
+    background-color: black !important;
+    width: 100%;
+}
+
+.dialogVerParticipantes {
+    padding: 1em;
+}
+
+.dialogVerParticipantesToolbar{
+    background-color: black !important;
+}
+
+.jaEntregou {
+    background-color: #67FFA1;
+}
+
+.mainToolbar {
+    background-color: black;
+}
+
+.textoBranco {
+    color: white;
+}

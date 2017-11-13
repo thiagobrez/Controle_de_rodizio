@@ -1,0 +1,13 @@
+{
+  "model": "admin",
+  "data": [
+    {
+      "_id": "58fa84bcfb3374281895fab6",
+      "nome": "Thiago",
+      "sobrenome": "Brezinski",
+      "email": "admin@labtic.com",
+      "senha": "admin",
+      "numerocelular": 48999510015
+    }
+  ]
+}

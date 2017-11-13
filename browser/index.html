@@ -1,0 +1,64 @@
+<!DOCTYPE>
+<html>
+<head lang="pt">
+    <meta charset="UTF-8">
+    <link rel="stylesheet" href="./bower_components/bootstrap/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="./bower_components/angular-material/angular-material.css">
+    <link rel="stylesheet" href="./stylesheets/esqueleto-style/main.css">
+    <link rel="stylesheet" href="./stylesheets/rodizio-style/main-rodizio.css">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Roboto:300,400,500,700,400italic">
+
+    <script src="bower_components/angular/angular.js"></script>
+    <script src="bower_components/angular/angular.min.js"></script>
+
+    <title>Controle de Rodízios</title>
+</head>
+<body ng-app="rodizio_app">
+
+    <navbar></navbar>
+    <!--final-->
+    <div class="container-fluid" ng-view="true"></div>
+
+    <!--teste-->
+    <!--<div ng-include="'/views/home_gerencia/homeGerencia.html'"></div>-->
+
+</body>
+
+<script src="/socket.io/socket.io.js"></script>
+<script src="scripts/events/eventemitter2.js"></script>
+<script src="scripts/events/Mensagem.js"></script>
+<script src="./scripts/events/SIOM.js"></script>
+
+<script src="./scripts/app.js"></script>
+<script src="./scripts/rotas.js"></script>
+
+<!--BOWER COMPONENTS-->
+<script src="./bower_components/sjcl/sjcl.js"></script>
+<script src="./bower_components/webcomponentsjs/webcomponents-loader.js"></script>
+<script src="./bower_components/jquery/dist/jquery.js"></script>
+<script src="./bower_components/angular-md5/angular-md5.js"></script>
+<script src="./bower_components/angular-animate/angular-animate.js"></script>
+<script src="./bower_components/angular-route/angular-route.js"></script>
+<script src="./bower_components/angular-aria/angular-aria.js"></script>
+<script src="./bower_components/angular-material/angular-material.js"></script>
+<script src="./bower_components/lil-uuid/uuid.min.js"></script>
+<script src="./bower_components/js-sha256/src/sha256.js"></script>
+
+<!--SERVICES AND CONTROLLER-->
+<script type="text/javascript" src="./scripts/services/userLogado.js"></script>
+<script type="text/javascript" src="./scripts/services/seguranca.js"></script>
+<script type="text/javascript" src="./scripts/util/entidadeFactory.js"></script>
+<script type="text/javascript" src="./views/home/homeController.js"></script>
+<script type="text/javascript" src="./views/home_gerencia/homeGerenciaController.js"></script>
+<script type="text/javascript" src="./views/login/loginController.js"></script>
+
+<!--DIRETIVAS-->
+<script src="views/navbar/navbar.js"></script>
+<script src="views/home/dialogoVerParticipantes/dialogoVerParticipantes.js"></script>
+<script src="views/home_gerencia/dialogoAdicionaParticipante/dialogoAdicionaParticipante.js"></script>
+<script src="views/home_gerencia/dialogoAdicionaRodizio/dialogoAdicionaRodizio.js"></script>
+<script src="views/home_gerencia/dialogoEditaParticipante/dialogoEditaParticipante.js"></script>
+<script src="views/home_gerencia/dialogoEditaRodizio/dialogoEditaRodizio.js"></script>
+<script src="views/home_gerencia/dialogoEntradasESaidas/dialogoEntradasESaidas.js"></script>
+
+</html>

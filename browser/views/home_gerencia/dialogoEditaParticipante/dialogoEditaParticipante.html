@@ -1,0 +1,38 @@
+<md-toolbar class="dialogToolbar">
+    <div class="md-toolbar-tools">
+        <h2>Editar participante</h2>
+    </div>
+</md-toolbar>
+<md-dialog-content>
+    <form name="formEditaParticipante" class="formEditaParticipante">
+        <div layout="column" layout-align="center">
+            <md-input-container>
+                <label>Participante:</label>
+                <md-select ng-model="participanteSelecionado">
+                    <md-option ng-value="participante"
+                               ng-repeat="participante in participantes">
+                        {{participante.nome}} {{participante.sobrenome}}
+                    </md-option>
+                </md-select>
+            </md-input-container>
+        </div>
+        <div layout="row" layout-align="center center">
+            <md-button ng-click="envia()" class="md-raised md-warn botaoConfirma">
+                Continuar
+            </md-button>
+            <md-button ng-click="fechaDialogo()" class="md-raised md-warn botaoComum">
+                Fechar
+            </md-button>
+        </div>
+    </form>
+</md-dialog-content>
+
+<div style="visibility: hidden">
+    <div id="dialogoAdicionaParticipante2" class="md-dialog-container">
+        <md-dialog class="dialogoAdicionaParticipantes" aria-label="Adicionar participante">
+            <dialogoadicionaparticipante editando="true"
+                                         participanteselecionado="participanteSelecionado">
+            </dialogoadicionaparticipante>
+        </md-dialog>
+    </div>
+</div>

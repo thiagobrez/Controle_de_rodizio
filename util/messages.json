@@ -1,0 +1,42 @@
+{
+  "participante": {
+    "nome": {
+      "REQUIRED": "É obrigatório informar um nome"
+    },
+    "sobrenome": {
+      "REQUIRED": "É obrigatório informar um sobrenome"
+    },
+    "email": {
+      "REQUIRED": "É obrigatório informar um e-mail"
+    },
+    "numerocelular": {
+      "REQUIRED": "É obrigatório informar um número de celular"
+    },
+    "removido": {
+
+    }
+  },
+  "rodizio": {
+    "nome": {
+      "REQUIRED": "É obrigatório informar um nome"
+    },
+    "participantes": {
+
+    },
+    "padrao": {
+      "REQUIRED": "É obrigatório informar um padrão"
+    },
+    "data_inicio": {
+      "REQUIRED": "É obrigatório informar a data de início"
+    },
+    "data_fim": {
+
+    },
+    "entradas": {
+
+    },
+    "saidas": {
+
+    }
+  }
+}

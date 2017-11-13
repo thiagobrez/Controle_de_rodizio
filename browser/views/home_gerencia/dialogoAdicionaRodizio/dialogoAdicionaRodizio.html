@@ -1,0 +1,85 @@
+<md-toolbar class="dialogToolbar">
+    <div class="md-toolbar-tools">
+        <h2>{{addOuEdit}} rodízio</h2>
+    </div>
+</md-toolbar>
+<md-dialog-content>
+    <form name="formAdicionaRodizio" id="formAdicionaRodizio" layout="column" class="formAdicionaRodizio">
+        <div layout="row">
+            <md-input-container>
+                <label>Nome:</label>
+                <input type="text" name="inputNome" ng-model="novoRodizio.nome">
+            </md-input-container>
+            <md-input-container>
+                <label>Padrão:</label>
+                <input type="text" name="inputPadrao" ng-model="novoRodizio.padrao">
+            </md-input-container>
+            <md-input-container>
+                <label>Data de início:</label>
+                <input type="date" name="inputData" ng-model="novoRodizio.data_inicio">
+            </md-input-container>
+        </div>
+        <div layout="row" layout-align="center">
+            <md-card class="cardParticipantes">
+                <header class="cardToolbar">
+                    <h4 class="textoCardParticipantesHeader">Adicionar participantes:</h4>
+                </header>
+                <md-content>
+                    <p ng-repeat="participante in participantes track by $index"
+                       ng-value="participante"
+                       ng-click="adicionaParticipanteAoRodizio(participante, $index)"
+                       class="textoCardParticipantes">
+                        {{participante.nome}} {{participante.sobrenome}}
+                    </p>
+                </md-content>
+            </md-card>
+            <md-card class="cardParticipantes">
+                <header class="cardToolbar">
+                    <h4 class="textoCardParticipantesHeader">Remover participantes:</h4>
+                </header>
+                <md-content>
+                    <p ng-click="removeParticipanteDoRodizio(participanteAdicionado.participante, $index)"
+                       ng-repeat="participanteAdicionado in participantesAdicionados track by $index"
+                       ng-value="participanteAdicionado"
+                       class="textoCardParticipantes">
+                        {{participanteAdicionado.participante.nome}} {{participanteAdicionado.participante.sobrenome}}
+                    </p>
+                </md-content>
+            </md-card>
+        </div>
+        <md-dialog-actions class="botoesAdicionarRodizio">
+            <md-button ng-click="envia()"
+                       class="md-raised md-warn botaoConfirma">
+                {{addOuEdit}}
+            </md-button>
+            <md-button ng-click="entradasESaidas()"
+                       ng-if="editando"
+                       class="md-raised md-primary"
+                       name="botaoEntradasESaidas">
+                Entradas/Saídas
+            </md-button>
+            <md-button ng-click="remove()"
+                       ng-if="editando"
+                       class="md-raised md-warn botaoRemove">
+                Remover
+            </md-button>
+            <md-button ng-click="fechaDialogo()"
+                       class="md-raised md-warn botaoComum">
+                Fechar
+            </md-button>
+        </md-dialog-actions>
+    </form>
+
+</md-dialog-content>
+
+<div style="visibility: hidden" ng-if="participantesAdicionados.length > 0">
+    <div id="dialogoEntradasESaidas" class="md-dialog-container">
+        <md-dialog class="dialogoEntradasESaidas" aria-label="Entradas e saidas">
+            <dialogoentradasesaidas participantesadicionados="participantesAdicionados"
+                                    rodizioselecionado="rodizioselecionado"
+                                    saidas="novoRodizio.saidas"
+                                    rodada="novoRodizio.rodada">
+            </dialogoentradasesaidas>
+        </md-dialog>
+    </div>
+</div>

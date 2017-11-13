@@ -1,0 +1,45 @@
+<md-toolbar class="dialogToolbar">
+    <div class="md-toolbar-tools">
+        <h2>Entradas e saídas</h2>
+    </div>
+</md-toolbar>
+<md-dialog-content>
+    <form name="formEntradasESaidas" id="formEntradasESaidas" layout="column" class="formEntradasESaidas">
+        <div layout="row">
+            <div layout="column">
+                <md-list>
+                    <md-list-item ng-repeat="participante in participantesadicionados track by $index"
+                                  ng-value="participante">
+                        <p>{{ participante.participante.nome }} {{ participante.participante.sobrenome }}</p>
+                        <md-checkbox aria-label="checkbox entregas"
+                                     class="md-secondary"
+                                     name="checkboxEntrega"
+                                     ng-model="jaEntregou[$index]"
+                                     ng-checked="participante.ja_entregou"
+                                     ng-click="toggleEntradas($index)">
+                        </md-checkbox>
+                    </md-list-item>
+                </md-list>
+            </div>
+            <div layout="column" layout-align="center">
+                <p ng-model="rodada">Rodada: {{rodada}}</p>
+                <p ng-model="entradas">Entradas: {{entradas}}</p>
+                <md-input-container>
+                    <label>Saídas:</label>
+                    <input type="number" min="0" name="inputSaidas" ng-model="saidas">
+                </md-input-container>
+            </div>
+        </div>
+        <md-dialog-actions class="botoesEntradasESaidas">
+            <md-button ng-click="envia()"
+                       class="md-raised md-warn botaoConfirma">
+                Confirmar
+            </md-button>
+            <md-button ng-click="fechaDialogo()"
+            class="md-raised md-warn botaoComum">
+                Fechar
+            </md-button>
+        </md-dialog-actions>
+
+    </form>
+</md-dialog-content>

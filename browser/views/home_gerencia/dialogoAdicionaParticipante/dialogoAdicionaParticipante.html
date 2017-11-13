@@ -1,0 +1,40 @@
+<md-toolbar class="dialogToolbar">
+    <div class="md-toolbar-tools">
+        <h2>{{addOuEdit}} participante</h2>
+    </div>
+</md-toolbar>
+<md-dialog-content>
+    <form name="formAdicionaParticipante" class="formAdicionaParticipante" layout="column" layout-align="center">
+        <md-input-container>
+            <label>Nome:</label>
+            <input type="text" ng-model="novoParticipante.nome">
+        </md-input-container>
+        <md-input-container>
+            <label>Sobrenome:</label>
+            <input type="text" ng-model="novoParticipante.sobrenome">
+        </md-input-container>
+        <md-input-container>
+            <label>E-mail:</label>
+            <input type="email" ng-model="novoParticipante.email" name="inputEmail">
+        </md-input-container>
+        <md-input-container>
+            <label>Telefone:</label>
+            <input type="number" ng-model="novoParticipante.numerocelular">
+        </md-input-container>
+        <div layout="row">
+            <md-button ng-click="envia()"
+                       class="md-raised md-warn botaoConfirma">
+                {{addOuEdit}}
+            </md-button>
+            <md-button ng-click="remove()"
+                       ng-if="editando"
+                       class="md-raised md-warn botaoRemove">
+                Remover
+            </md-button>
+            <md-button ng-click="fechaDialogo()"
+                       class="md-raised md-warn botaoComum">
+                Fechar
+            </md-button>
+        </div>
+    </form>
+</md-dialog-content>

@@ -1,0 +1,19 @@
+{
+  "db": {
+    "mongodb": {
+      "local": "localhost",
+      "nome":"controle_de_rodizio"
+    }
+  },
+  "server": {
+    "domain": "",
+    "porta": 1337,
+    "images": "",
+    "socketio": {}
+  },
+  "eventConfig": {
+    "wildcard": true,
+    "newListener": true,
+    "maxListeners": 2000
+  }
+}

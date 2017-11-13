@@ -1,0 +1,57 @@
+<!--<div>-->
+    <!--&lt;!&ndash;NAVBAR&ndash;&gt;-->
+    <!--<nav class="navbar navbar-config navbar-static-top">-->
+        <!--<div class="container-fluid">-->
+            <!--&lt;!&ndash;CABECARIO&ndash;&gt;-->
+            <!--<div class="navbar-header">-->
+                <!--&lt;!&ndash;BTN PARA RESPONSIVIDADE&ndash;&gt;-->
+                <!--<button-->
+                    <!--type="button"-->
+                    <!--class="navbar-toggle navbar-toggleconfig collapsed"-->
+                    <!--data-toggle="collapse"-->
+                    <!--data-target="#navbar"-->
+                    <!--aria-expanded="false"-->
+                    <!--aria-controls="navbar"-->
+                <!--&gt;-->
+                    <!--<span class="sr-only">Toggle navigation</span>-->
+                    <!--<span class="icon-bar"></span>-->
+                    <!--<span class="icon-bar"></span>-->
+                    <!--<span class="icon-bar"></span>-->
+                <!--</button>-->
+                <!--&lt;!&ndash;TITULO&ndash;&gt;-->
+                <!--<a class="navbar-brand navbar-link" href="">Controle de Rodízios</a>-->
+                <!--<p class="navbar-text navbar-textoconfig" ng-if="usuariologado !== null">-->
+                    <!--Logado como {{usuariologado.nome}}-->
+                <!--</p>-->
+            <!--</div>-->
+            <!--&lt;!&ndash;LOCAIS DE NAVEGACAO&ndash;&gt;-->
+            <!--<div id="navbar" class="collapse navbar-collapse" >-->
+                <!--<ul class="nav navbar-nav navbar-right">-->
+                    <!--&lt;!&ndash;SAIR&ndash;&gt;-->
+                    <!--<li>-->
+                        <!--<a class="navbar-link" href="" ng-click="trocaRota('login')">-->
+                            <!--Login-->
+                        <!--</a>-->
+                    <!--</li>-->
+                <!--</ul>-->
+            <!--</div>-->
+        <!--</div>-->
+    <!--</nav>-->
+
+<!--</div>-->
+
+<md-toolbar>
+    <div class="md-toolbar-tools mainToolbar">
+        <h2 flex>CONTROLE DE RODÍZIOS</h2>
+        <md-button ng-click="trocaRota('login')"
+                   ng-if="!logado"
+                   class="textoBranco">
+            LOGIN
+        </md-button>
+        <md-button ng-click="trocaRota()"
+                   ng-if="logado"
+                   class="textoBranco">
+            LOGOUT
+        </md-button>
+    </div>
+</md-toolbar>

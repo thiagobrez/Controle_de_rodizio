@@ -1,0 +1,86 @@
+.cardGerencia {
+    margin-top: 3%;
+    margin-left: 10%;
+    margin-right: 10%;
+    margin-bottom: 10%;
+    -webkit-border-radius: 10px;
+}
+
+/*.cardGerenciaToolbar {*/
+    /*-webkit-border-top-left-radius: 10px;*/
+    /*-webkit-border-top-right-radius: 10px;*/
+    /*background-color: black !important;*/
+/*}*/
+
+.botoesAcaoAdmin {
+    background-color: black !important;
+    margin-top: 2%;
+    margin-bottom: 2%;
+    width: 30%;
+}
+
+.formAdicionaParticipante {
+    padding: 1em;
+}
+
+.formAdicionaRodizio {
+    padding: 1em;
+}
+
+.formAdicionaRodizio md-input-container {
+    min-width: 15em;
+}
+
+.formEditaParticipante {
+    padding: 1em;
+    min-width: 20em;
+}
+
+.formEditaRodizio {
+    padding: 1em;
+    min-width: 20em;
+}
+
+.formEntradasESaidas {
+    padding: 1em;
+}
+
+.cardParticipantes {
+    -webkit-border-radius: 10px;
+}
+
+.textoCardParticipantes {
+    padding-top: 10px;
+    padding-left: 5px;
+}
+
+.cardParticipantesHeader {
+    background-color: #2f4395;
+    color: white;
+    -webkit-border-top-left-radius: 10px;
+    -webkit-border-top-right-radius: 10px;
+}
+
+.textoCardParticipantesHeader {
+    color: white;
+    padding-left: 5px;
+}
+
+.botoesAdicionarRodizio {
+    margin-top: 10px;
+}
+
+.botaoConfirma {
+    background-color: #00e08a !important;
+}
+.botaoRemove {
+    background-color: brown !important;
+}
+
+.dialogToolbar {
+    background-color: black !important;
+}
+
+html, body {
+    background-image: url("../../media/cafe.jpg");
+}
